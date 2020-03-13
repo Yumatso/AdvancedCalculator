@@ -21,6 +21,7 @@ namespace CalculadoraDeMatrizes
         public static int value21, value22, value23;
         public static int value31, value32, value33;
 
+        public static float b,h,A,r,pi;
         public static float result, value1, value2,value3;
         public static double num1,num2,num3,result2,result3;
             //testando
@@ -628,8 +629,45 @@ namespace CalculadoraDeMatrizes
         #endregion
 
         #region Area
-        public static void Area(){
+        public static void Area()
+        {
+            Console.Clear();
+            Console.WriteLine("Área do formato geométrico: ");
+            Console.WriteLine($"1 - Quadrado\n2 - Triângulo\n3 - Retângulo\n4 - Círculo\n5 - Trapézio\n6 - Cilindro\n7 - Esfera\n8 - Pirâmide ");
+            option=Console.ReadLine();
+            if (option == "1" | option == "3")
+            {
+                Console.Clear();
+                Console.WriteLine("Digite a Base: ");
+                b=float.Parse(Console.ReadLine());
+                Console.Clear();
+                Console.WriteLine("Digite a Altura: ");
+                h=float.Parse(Console.ReadLine());
+                Console.Clear();
+                A=b*h;
+                Console.WriteLine($"{A}");
 
+            } 
+            else if (option == "2")
+            {
+                Console.Clear();
+                Console.WriteLine("Digite a Base: ");
+                b=float.Parse(Console.ReadLine());
+                Console.Clear();
+                Console.WriteLine("Digite a Altura: ");
+                h=float.Parse(Console.ReadLine());
+                Console.Clear();
+                A=b*h/2;
+                Console.WriteLine($"{A}");
+            } 
+            else if (option == "4")
+            {
+                Console.Clear();              
+                Console.WriteLine("Digite o raio: ");
+                r=float.Parse(Console.ReadLine());
+                Console.Clear();
+                A=3.14f*r;
+            }                                                           
         }
         #endregion
 
